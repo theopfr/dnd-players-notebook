@@ -1,0 +1,40 @@
+
+.notebookOptionBoxParent {
+    position: fixed;
+    top: 125px;
+    left: 0px;
+    height: 100%;
+    width: 174px;
+    background-color: var(--main-dark-blue);
+    border-right: solid 1px var(--main-bright-blue);
+}
+
+.notebookOptionButton {
+    position: relative;
+    margin-top: 12px;
+    left: 12px;
+    width: 150px;
+    height: 100px;
+    background-color: var(--main-medium-blue);
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    transition: .075s ease-out;
+}
+
+.notebookOptionButton:hover {
+    background-color: transparent;
+    transition: .075s ease-in;
+}
+
+.notebookOptionIcon {
+    padding-top: 25px;
+}
+
+.notebookOptionTitle {
+    padding-top: 10px;
+    font-size: 13px;
+    color: var(--main-white);
+    text-transform: uppercase;
+    font-weight: bold;
+}

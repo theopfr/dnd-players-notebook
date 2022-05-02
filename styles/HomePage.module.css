@@ -1,0 +1,8 @@
+
+.homePageParent {
+    width: 100%;
+    width: 100%;
+    background-color: var(--main-dark-blue);
+    min-height: calc(100vh);
+}
+  

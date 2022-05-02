@@ -1,0 +1,8 @@
+
+.npcsParent {
+    top: 125px;
+    left: 175px;
+    width: calc(100% - 175px);
+    height: calc(100% - 125px);
+    background-color: aqua;
+}
