@@ -28,14 +28,18 @@ export default function CampaignsPopup(props) {
 
     return (
         <div className={styles.campaignsPopupParent}>
+
             <div className={styles.campaignsPopupList}>
-                <button className={styles.campaignPopupButton} key={"createCampaignPopupButton"} onClick={() => {
-                    alert("hey")
+
+                <button className={styles.createCampaignButton} key={"createCampaignPopupButton"} onClick={() => {
+                    window.location.href = "/campaigns"
                 }}>
-                    <div className={styles.createCampaignIconBox}>
-                        <img className={styles.createCampaignIcon} src="/images/add-campaign-icon.svg"/>
-                    </div>
+                    <p className={styles.addCampaignText} style={{fontSize: "19px", left: "36px"}}>+</p>
+                    <p className={styles.addCampaignText} style={{fontSize: "13px", right: "36px"}}>add</p>
                 </button>
+
+                <div className={styles.addCampaignSeperator}/>
+
                 {campaigns.map((campaign, idx) => {
 
                     var selectedStyle  = {

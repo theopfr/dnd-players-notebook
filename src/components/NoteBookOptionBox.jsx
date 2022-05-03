@@ -10,12 +10,6 @@ export default function NoteBookOptionBox() {
     const [selectedOption, setSelectedOption] = useState(null);
     const [selectedCampaign, setSelectedCampaign] = useState(null);
 
-    /*useEffect(() => {
-        let currentRouteList = window.location.pathname.split("/");
-        setSelectedCampaign(currentRouteList[2]);
-    }, []);*/
-
-
     const router = useRouter();
 
     useEffect(() => {

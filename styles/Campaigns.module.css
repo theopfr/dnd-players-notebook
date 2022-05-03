@@ -11,9 +11,10 @@
 
 .campaignSelectionInstructionBox {
     position: absolute;
-    top: calc(50% - 125px);
+    top: calc(50% - 200px);
     left: 0px;
     width: 100%;
+    height: fit-content;
 }
 
 .selectCampaignInstruction {
@@ -22,11 +23,68 @@
     padding-right: 30px;
     width: 100%;
     text-align: center;
-    font-size: 15px;
+    font-size: 13px;
     letter-spacing: 1px;
     font-weight: bold;
-    color: var(--main-purple);
+    color: var(--main-brighter-blue);
     text-transform: uppercase;
-    line-height: 25px;
+    line-height: 35px;
+    margin: 0px;
 }
-  
+
+.createCampaignBox {
+    position: relative;
+    top: 15px;
+    width: 400px;
+    left: calc(50% - 200px);
+    right: 20%;
+    background-color: var(--main-medium-blue);
+}
+
+.submitNewCampaignButton {
+    position: absolute;
+    width: 30%;
+    left: 0px;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--main-purple);
+    color: var(--main-dark-blue);
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: .075s ease-out;
+}
+
+.submitNewCampaignButton:hover {
+    box-shadow: 0 0 7px var(--main-purple-shadow);
+}
+
+.submitNewCampaignButton:active {
+    transform: scale(0.96);
+}
+
+.createCampaignInput {
+    position: absolute;
+    width: calc(70% - 10px);
+    right: 0px;
+    background-color: transparent;
+    height: 40px;
+    border: solid 2px var(--main-purple);
+    border-radius: 3px;
+    padding-left: 10px;
+    color: var(--main-purple);
+    transition: .075s ease-out;
+}
+
+.createCampaignInput::placeholder {
+    color: var(--main-purple);
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.createCampaignInput:focus {
+    outline-width: 0;
+    box-shadow: 0 0 7px var(--main-purple-shadow);
+    transition: .075s ease-in;
+}

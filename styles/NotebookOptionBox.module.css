@@ -3,18 +3,25 @@
     position: fixed;
     top: 125px;
     left: 0px;
-    height: 100%;
+    height: calc(100% - 125px);
     width: 174px;
     background-color: var(--main-dark-blue);
     border-right: solid 1px var(--main-bright-blue);
+    padding-bottom: 12px;
+    overflow-y: auto;
+}
+
+.notebookOptionBoxParent::-webkit-scrollbar {
+    display: none;
 }
 
 .notebookOptionButton {
     position: relative;
     margin-top: 12px;
     left: 12px;
-    width: 150px;
-    height: 100px;
+    width: calc(100% - 24px);
+    min-height: 100px;
+    height: fit-content;
     background-color: var(--main-medium-blue);
     border-radius: 4px;
     outline: none;

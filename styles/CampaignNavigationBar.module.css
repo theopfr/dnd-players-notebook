@@ -25,6 +25,24 @@
     transition: .075s ease-out;
 }
 
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
 .campaignsDisplayButtonClosed:after {
     position: absolute;
     content: url("/images/arrow-down-icon.svg");
@@ -50,6 +68,10 @@
 .campaignsDisplayButtonOpen {
     padding-left: 35px;
     box-shadow: 0 0 12px var(--main-purple-shadow);
+}
+
+.campaignsDisplayButtonOpen:disabled:not(:active) {
+    animation: shake 0.65s forwards;
 }
 
 .closeCampaignsPopupIcon {
@@ -126,10 +148,11 @@
 }
 
 .campaignsPopupList {
-    position: fixed;
-    top: 137px;
+    position: relative;
+    top: 12px;
     left: 12px;
-    width: 150px;
+    width: calc(100% - 24px);
+    height: calc(100% - 149px);
     overflow-y: auto;
     overflow-x: hidden;
     bottom: 12px;
@@ -137,11 +160,69 @@
     border: solid 2px var(--main-purple);
     border-radius: 5px;
     box-shadow: 0 0 12px var(--main-purple-shadow);
+    padding-bottom: 12px;
     z-index: 1000;
 }
 
-.campaignsPopupParent::-webkit-scrollbar {
+.campaignsPopupList::-webkit-scrollbar {
     display: none;
+}
+
+.createCampaignButton {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    left: 12px;
+    width: calc(100% - 24px);
+    height: 50px;
+    background-color: var(--main-medium-blue);
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    line-height: 21px;
+    transition: .075s ease-out;
+    margin-bottom: 12px;
+}
+
+.createCampaignButton:hover {
+    background-color: transparent;
+}
+
+.createCampaignIcon {
+    position: absolute;
+    left: 30px;
+    top: calc(50% - 9px);
+    width: 16px;
+}
+
+.addCampaignText {
+    position: absolute;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--main-brighter-blue);
+}
+
+.createCampaignBox {
+    position: relative;
+    margin-top: 12px;
+    left: 12px;
+    width: calc(100% - 24px);
+    height: 50px;
+    background-color: var(--main-medium-blue);
+    border-radius: 4px;
+    outline: none;
+    margin-bottom: 12px;
+    z-index: 2000;
+}
+
+.addCampaignSeperator {
+    position: relative;
+    left: 12px;
+    width: calc(100% - 24px);
+    height: 1px;
+    background-color: var(--main-bright-blue);
 }
 
 .campaignPopupButton {
@@ -150,7 +231,7 @@
     align-items: center;
     margin-top: 12px;
     left: 12px;
-    width: 122px;
+    width: calc(100% - 24px);
     height: 100px;
     background-color: var(--main-medium-blue);
     border-radius: 4px;
@@ -176,20 +257,4 @@
     text-transform: uppercase;
 }
 
-.createCampaignIconBox {
-    position: absolute;
-    top: calc(50% - 28px);
-    left: calc(50% - 28px);
-    width: 56px;
-    height: 56px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: solid 3px var(--main-brighter-blue);
-    border-radius: 100%;
-}
 
-.createCampaignIcon {
-    position: absolute;
-    width: 28px;
-}
