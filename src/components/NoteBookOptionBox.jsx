@@ -25,6 +25,11 @@ export default function NoteBookOptionBox() {
         });
     }, [router.events]);
 
+    useEffect(() => {
+        let currentRouteList = window.location.pathname.split("/");
+        setSelectedCampaign(currentRouteList[2]);
+    }, []);
+
 
     return (
         <div className={styles.notebookOptionBoxParent}>

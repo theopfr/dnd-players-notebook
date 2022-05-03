@@ -14,13 +14,13 @@ a {
     box-sizing: border-box;
 }
 
-
 :root {
     --main-dark-blue: #181D29;
     --main-medium-blue: #1F2430;
     --main-bright-blue: #323A4E;
+    --main-brighter-blue: #465069;
     --main-purple: #8163FC;
     --main-purple-shadow: #8263fc94;
     --main-white: #F7F8F2;
     --main-white-grayed: #f7f8f239;
-  }
+}
