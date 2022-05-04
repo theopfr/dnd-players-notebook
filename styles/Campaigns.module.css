@@ -5,8 +5,7 @@
     left: 174px;
     width: calc(100% - 174px);
     height: calc(100% - 125px);
-    background-color: aqua;
-    background: var(--main-dark-blue);
+    background-color: var(--main-dark-blue);
 }
 
 .campaignSelectionInstructionBox {
@@ -23,7 +22,7 @@
     padding-right: 30px;
     width: 100%;
     text-align: center;
-    font-size: 13px;
+    font-size: 15px;
     letter-spacing: 1px;
     font-weight: bold;
     color: var(--main-brighter-blue);
@@ -44,7 +43,7 @@
 .submitNewCampaignButton {
     position: absolute;
     width: 30%;
-    left: 0px;
+    right: 0px;
     height: 40px;
     border: none;
     border-radius: 3px;
@@ -57,17 +56,20 @@
 }
 
 .submitNewCampaignButton:hover {
+    transition: .075s ease-out;
     box-shadow: 0 0 7px var(--main-purple-shadow);
 }
 
 .submitNewCampaignButton:active {
+    transition: none;
     transform: scale(0.96);
+    font-size: 14px;
 }
 
 .createCampaignInput {
     position: absolute;
     width: calc(70% - 10px);
-    right: 0px;
+    left: 0px;
     background-color: transparent;
     height: 40px;
     border: solid 2px var(--main-purple);

@@ -25,7 +25,7 @@
 }
 
 .homeButton:hover {
-    background-color: var(--main-bright-blue);
+    background-color: var(--main-medium-blue);
     transition: .075s ease-in;
 }
 

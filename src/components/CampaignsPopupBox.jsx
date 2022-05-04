@@ -31,7 +31,7 @@ export default function CampaignsPopup(props) {
 
             <div className={styles.campaignsPopupList}>
 
-                <button className={styles.createCampaignButton} key={"createCampaignPopupButton"} onClick={() => {
+                <button className={styles.createCampaignButton} disabled={window.location.pathname === "/campaigns"} key={"createCampaignPopupButton"} onClick={() => {
                     window.location.href = "/campaigns"
                 }}>
                     <p className={styles.addCampaignText} style={{fontSize: "19px", left: "36px"}}>+</p>
