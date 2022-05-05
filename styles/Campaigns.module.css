@@ -80,13 +80,16 @@
 }
 
 .createCampaignInput::placeholder {
-    color: var(--main-purple);
+    color: var(--main-purple-shadow);
     font-size: 11px;
     text-transform: uppercase;
 }
 
-.createCampaignInput:focus {
-    outline-width: 0;
+.createCampaignInput:hover {
     box-shadow: 0 0 7px var(--main-purple-shadow);
     transition: .075s ease-in;
+}
+
+.createCampaignInput:focus {
+    outline-width: 0;
 }
