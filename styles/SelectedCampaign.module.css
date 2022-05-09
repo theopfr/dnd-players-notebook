@@ -99,8 +99,9 @@
     background-color: var(--main-dark-blue); 
     color: var(--main-purple);
     border-radius: 3px;
-    transition: .075s ease-out;
     padding-left: 10px;
+    margin-right: 55px;
+    transition: .075s ease-out;
 }
 
 /*input[type=number]::-webkit-inner-spin-button:hover {
@@ -109,6 +110,7 @@
 
 .campaignStateLocationInput::placeholder {
     font-size: 11px;
+    color: var(--main-purple);
     text-transform: uppercase;
 }
 
