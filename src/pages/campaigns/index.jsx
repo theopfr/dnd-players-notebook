@@ -11,7 +11,7 @@ export default function Campaigns() {
                 </p>
 
                 <div className={styles.createCampaignBox}>
-                    <input className={styles.createCampaignInput} placeholder="enter the name campaign name here..."></input>
+                    <input className={styles.createCampaignInput} placeholder="enter the campaign name here..."></input>
                     <button className={styles.submitNewCampaignButton}>add</button>
                 </div>
             </div>

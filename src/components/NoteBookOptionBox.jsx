@@ -39,7 +39,7 @@ export default function NoteBookOptionBox() {
                         <button className={styles.notebookOptionButton} key={`notebookOptionButton${idx}`} style={selectedOption === idx ? selectedStyle : null} onClick={() => {
                             setSelectedOption(idx);
                         }}>
-                            <img className={styles.notebookOptionIcon} src={`/images/arrow-down-icon.svg`}/>
+                            <img className={styles.notebookOptionIcon} src={`/images/${option}-icon.png`}/>
                             <p className={styles.notebookOptionTitle}>{option}</p>
                         </button>
                     </Link>

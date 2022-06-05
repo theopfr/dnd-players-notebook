@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import Link from "next/link";
 import styles from "../../styles/CampaignNavigationBar.module.css";
 import CampaignsPopup from "./CampaignsPopupBox";
 

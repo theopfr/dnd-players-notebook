@@ -8,18 +8,102 @@
     background-color: var(--main-dark-blue);
 }
 
-.campaignSettingsButton {
+.campaignStateBox {
     position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    width: 100%;
+    height: 50px;
+    border-bottom: solid 1px var(--main-bright-blue);
+    padding-right: 12px;
+}
+
+.campaignStateSubBox {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    border-right: solid 1px var(--main-bright-blue);
+    width: auto;
+}
+
+.campaignStateTitle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    line-height: 15px;
+    margin: 0px;
+    left: 0px;
+    right: 30px;
+    font-size: 17px;
+    margin-right: 45px;
+    margin-left: 15px;
+    font-weight: bold;
+    color: var(--main-purple);
+    text-transform: uppercase;
+}
+
+.campaignStateInput {
+    position: relative;
+    height: 30px;
+    top: calc(50% - 15px);
+    right: 15px;
+    width: 52px;
+    background-color: var(--main-purple);
+    border: none;
+    padding-left: 5px;
+    color: var(--main-dark-blue);
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: .075s ease-out;
+}
+
+.campaignStateInput::placeholder {
+    color: var(--main-dark-blue);
+}
+
+.campaignStateLocationInput {
+    position: relative;
+    height: 30px;
+    top: calc(50% - 15px);
+    right: 15px;
+    width: 200px;
+    border: solid 2px var(--main-purple);
+    background-color: var(--main-dark-blue); 
+    color: var(--main-purple);
+    border-radius: 3px;
+    padding-left: 10px;
+    transition: .075s ease-out;
+}
+
+.campaignStateLocationInput::placeholder {
+    font-size: 11px;
+    color: var(--main-purple);
+    text-transform: uppercase;
+}
+
+.campaignStateInput:hover, .campaignStateLocationInput:hover {
+    box-shadow: 0 0 7px var(--main-purple-shadow);
+    transition: .075s ease-in;
+}
+
+.campaignStateInput:focus, .campaignStateLocationInput:focus {
+    outline-width: 0;
+}
+
+.campaignSettingsButton {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 15px;
-    right: 15px;
-    height: 45px;
-    width: 45px;
+    margin-top: 6px;
+    margin-left: auto;
+    height: 38px;
+    width: 38px;
     background-color: transparent;
     border: none;
-    border-radius: 5px;
+    border-radius: 100%;
     outline: none;
     transition: .075s ease-out;
 }
@@ -35,90 +119,32 @@
     transform: scale(0.96);
 }
 
-.campaignStateBox {
+.playersBox {
     position: absolute;
-    display: flex;
-    flex-direction: row;
-    flex: 1 1 auto;
-    width: calc(100%);
-    height: 75px;
-    border-bottom: solid 1px var(--main-bright-blue);
+    top: 50px;
+    left: 0px;
+    width: calc(100% - 30px);
+    height: calc(100% - 150px);
 }
 
-.campaignStateSubBox {
-    display: flex;
-    flex-direction: row;
+.playersBoxCollectionWrapper {
+    position: absolute;
+    left: 15px;
+    top: 50px;
+    width: 100%;
     height: 100%;
-    border-left: solid 1px var(--main-bright-blue);
-    width: auto;
 }
 
-.campaignStateTitle {
+.playersTitle {
     position: relative;
     display: flex;
     align-items: center;
-    height: 100%;
-    line-height: 17px;
-    margin: 0px;
-    left: 0px;
+    line-height: 27px;
+    left: 15px;
     right: 30px;
     font-size: 17px;
-    margin-right: 50px;
-    margin-left: 30px;
+    margin-right: 45px;
     font-weight: bold;
     color: var(--main-purple);
     text-transform: uppercase;
-}
-
-.campaignStateInput {
-    position: relative;
-    height: 38px;
-    top: calc(50% - 19px);
-    right: 30px;
-    width: 65px;
-    background-color: var(--main-purple);
-    border: none;
-    padding-left: 10px;
-    color: var(--main-dark-blue);
-    border-radius: 3px;
-    font-weight: bold;
-    transition: .075s ease-out;
-}
-
-.campaignStateInput::placeholder {
-    color: var(--main-dark-blue);
-}
-
-.campaignStateLocationInput {
-    position: relative;
-    height: 38px;
-    top: calc(50% - 19px);
-    right: 30px;
-    width: 200px;
-    border: solid 2px var(--main-purple);
-    background-color: var(--main-dark-blue); 
-    color: var(--main-purple);
-    border-radius: 3px;
-    padding-left: 10px;
-    margin-right: 55px;
-    transition: .075s ease-out;
-}
-
-/*input[type=number]::-webkit-inner-spin-button:hover {
-    opacity: 0.65;
-}*/
-
-.campaignStateLocationInput::placeholder {
-    font-size: 11px;
-    color: var(--main-purple);
-    text-transform: uppercase;
-}
-
-.campaignStateInput:hover, .campaignStateLocationInput:hover {
-    box-shadow: 0 0 7px var(--main-purple-shadow);
-    transition: .075s ease-in;
-}
-
-.campaignStateInput:focus, .campaignStateLocationInput:focus {
-    outline-width: 0;
 }

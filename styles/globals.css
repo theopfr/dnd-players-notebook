@@ -26,3 +26,24 @@ a {
     --main-white-grayed: #f7f8f239;
 }
 
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    opacity: 0.25;
+}
+
+::-webkit-scrollbar {
+    width: 17px;
+}
+  
+::-webkit-scrollbar-track {
+    background: var(--main-dark-blue);
+    border-radius: 3px;
+    border: solid 1px var(--main-purple);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8263fc38;
+    border: solid 1px var(--main-purple);
+    border-radius: 3px;
+}
