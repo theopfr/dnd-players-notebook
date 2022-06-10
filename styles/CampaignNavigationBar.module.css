@@ -6,7 +6,7 @@
     height: 75px;
     background-color: var(--main-dark-blue);
     border-bottom: solid 1px var(--main-bright-blue);
-    z-index: 100;
+    z-index: 10;
 }
 
 .campaignsDisplayButton {
@@ -166,7 +166,7 @@
     border-radius: 5px;
     box-shadow: 0 0 12px var(--main-purple-shadow);
     padding-bottom: 12px;
-    z-index: 1000;
+    z-index: 20;
 }
 
 .campaignsPopupList::-webkit-scrollbar {
@@ -219,7 +219,7 @@
     border-radius: 4px;
     outline: none;
     margin-bottom: 12px;
-    z-index: 2000;
+    z-index: 30;
 }
 
 .addCampaignSeperator {

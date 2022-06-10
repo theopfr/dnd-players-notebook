@@ -64,7 +64,7 @@ export default function SelectedCampaign() {
             <div className={styles.playersBox}>
                 <h1 className={styles.playersTitle}>players:</h1>
                 <div className={styles.playersBoxCollectionWrapper}>
-                    <CollectionBox noteBookOption={"npc"}/>
+                    <CollectionBox noteBookOption={"player"}/>
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@
     height: 50px;
     background-color: var(--main-dark-blue);
     border-bottom: solid 1px var(--main-bright-blue);
-    z-index: 100;
+    z-index: 10;
 }
 
 .homeButton {

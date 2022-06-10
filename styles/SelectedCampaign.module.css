@@ -105,18 +105,13 @@
     border: none;
     border-radius: 100%;
     outline: none;
-    transition: .075s ease-out;
+    transition: .05s ease-out;
 }
 
-.campaignSettingsButton:hover {
-    border: solid 2px var(--main-purple);
-    box-shadow: 0 0 12px var(--main-purple-shadow);
-    transition: .075s ease-in;
-}
 
 .campaignSettingsButton:active {
-    transition: none;
-    transform: scale(0.96);
+    transform: scale(0.9);
+    transition: .05s ease-in;
 }
 
 .playersBox {

@@ -4,7 +4,7 @@
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 30px;
+    height: 25px;
     display: flex;
     flex-direction: row;
     flex: 1 1 auto;
@@ -25,15 +25,24 @@
     color: var(--main-purple);
     margin: 0px;
     margin-right: 20px;
-    margin-top: 7px;
+    margin-top: 6px;
     line-height: 13px;
     font-size: 14px;
+    flex-shrink: 0;
 }
 
 .collectionQueryButton {
     width: 125px;
     border-radius: 3px;
     background-color: var(--main-purple);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    transition: .075s ease-out;
+}
+
+.collectionQueryButton:focus {
+    outline: none;
 }
 
 .collectionItemQueryLastSubBox {
@@ -41,11 +50,9 @@
     margin-right: 0px;
 }
 
-
 .searchCollectionItems {
     position: relative;
-    height: 30px;
-    top: calc(50% - 15px);
+    height: 100%;
     width: 200px;
     border: solid 2px var(--main-purple);
     background-color: var(--main-dark-blue); 
@@ -63,7 +70,7 @@
     text-transform: uppercase;
 }
 
-.searchCollectionItems:hover {
+.collectionQueryButton:hover, .searchCollectionItems:hover {
     box-shadow: 0 0 7px var(--main-purple-shadow);
     transition: .075s ease-in;
 }
@@ -76,7 +83,7 @@
 
 .collectionBoxParent {
     position: absolute;
-    top: 45px;
+    top: 40px;
     left: 0px;
     width: 100%;
     height: 100%;
@@ -133,6 +140,22 @@
 .addCollectionItemButton:hover > .addCollectionItemText {
     color: var(--main-purple);
     transition: .075s ease-in;
+}
+
+.noCollectionItemsText {
+    position: absolute;
+    top: 50%;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: var(--main-brighter-blue);
+    text-transform: uppercase;
+    line-height: 35px;
+    margin: 0px;
 }
 
 .collectionItem {
@@ -213,4 +236,140 @@
 .addCollectionItemButton:hover > .addCollectionItemIcon {
     border-color: var(--main-purple);
     transition: .075s ease-in;
+}
+
+/* POPUP */
+
+.collectionItemPopup {
+    position: fixed;
+    top: 50px;
+    left: calc(50% - 400px);
+    max-width: 800px;
+    min-width: 400px;
+    right: 50px;
+    bottom: 50px;
+    border-radius: 3px;
+    background-color: var(--main-dark-blue);
+    z-index: 40;
+}
+
+.collectionItemPopupHeader {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 54px;
+    border-bottom: solid 1px var(--main-bright-blue);
+}
+
+.closeCollectionItemPopup {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    top: 15px;
+    right: 15px;
+    height: 20px;
+    width: 20px;
+    outline: none;
+    border: none;
+    transition: .05s ease-out;
+}
+
+.closeCollectionItemPopupIcon {
+    height: 35px;
+    width: 35px;
+}
+
+.closeCollectionItemPopup:active {
+    transform: scale(0.9);
+    transition: .05s ease-out;
+}
+
+.collectionItemPopupTitle, .collectionItemPopupName {
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--main-purple);
+    margin: 0px;
+    top: 15px;
+    left: 15px;
+    float: left;
+}
+
+.collectionItemPopupName {
+    padding-left: 30px;
+}
+
+.collectionItemAttributesBox {
+    position: absolute;
+    top: calc(54px + 15px);
+    left: 15px;
+    height: calc(60% - 54px - 30px);
+    width: calc(60% - 30px);
+}
+
+.collectionItemImageBox {
+    position: absolute;
+    top: calc(54px + 15px);
+    left: 60%;
+    height: calc(60% - 54px - 30px);
+    width: calc(40% - 15px);
+    border: solid 1px blue;
+}
+
+.collectionItemNotesBox {
+    position: absolute;
+    top: 60%;
+    left: 15px;
+    height: calc(40% - 15px);
+    width: calc(100% - 30px);
+    border: solid 1px blue;
+}
+
+.collectionItemTitle {
+    position: absolute;
+    font-size: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    color: var(--main-purple);
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+.collectionItemAttributesTable {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--main-white);
+    text-transform: uppercase;
+    border-spacing: 0px;
+}
+
+.collectionItemAttributesKey {
+    height: 55px;
+    width: 50%;
+    font-weight: bold;
+    border-right: solid 1px var(--main-bright-blue);
+    border-bottom: solid 1px var(--main-bright-blue);
+
+}
+
+.collectionItemAttributesValue {
+    width: 50%;
+    border-bottom: solid 1px var(--main-bright-blue);
+    padding-left: 15px;
+}
+
+
+.collectionItemAttributesValue:focus {
+    outline-color: var(--main-purple);
+    outline-width: 2px;
+    outline-style: solid;
+    border-radius: 3px;
 }
